@@ -47,7 +47,9 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'https://jsonplaceholder.typicode.com/'
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {

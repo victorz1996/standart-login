@@ -8,7 +8,7 @@ export default {
     },
     methods: {
         getData() {
-            this.$get('https://jsonplaceholder.typicode.com/users', (res) => {
+            this.$get('users', (res) => {
                 console.log(res, 'response')
             })
         }
