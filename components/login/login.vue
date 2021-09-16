@@ -17,30 +17,26 @@
         <v-form>
           <v-row no-gutters justify="center" class="text-center">
             <v-col cols="10">
-              <v-text-field
-                v-model="username"
-                type="text"
-                placeholder="Username"
+              <TextField
+                outlined
                 label="Username"
-                outlined
+                append-icon="mdi-account"
+                @model="username = $event"
               />
-            </v-col>
-            <v-col cols="10">
-              <v-text-field
-                v-model="password"
-                autocomplete="new-password"
+              <TextField
                 type="password"
-                placeholder="password"
-                label="password"
                 outlined
+                label="Password"
+                required
+                @model="password = $event"
               />
             </v-col>
             <v-col cols="12" class="mb-5">
-              <GenericButton color="primary" large @click="login">Log In</GenericButton>
+              <GenericButton color="primary" large @click="login"
+                >Log In</GenericButton
+              >
             </v-col>
-            <v-col>
-              
-            </v-col>
+            <v-col> </v-col>
           </v-row>
         </v-form>
 
