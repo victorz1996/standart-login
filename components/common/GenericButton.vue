@@ -3,6 +3,7 @@
     :color="color"
     :icon="icon"
     :text="text"
+    :type="type"
     :outlined="outlined"
     :disabled="disabled"
     :rounded="rounded"
@@ -10,6 +11,11 @@
     :elevation="elevationC"
     :fab="fab"
     :dark="dark"
+    :large="large"
+    :small="small"
+    :x-large="xLarge"
+    :x-small="xSmall"
+    :block="block"
     @click="click"
     @dblclick="dblclick"
   >
@@ -46,6 +52,10 @@ export default Vue.extend({
       type: Boolean,
       default: false,
     },
+    type: {
+      type: String  ,
+      default: 'button',
+    },
     rounded: {
       type: Boolean,
       default: false,
@@ -62,14 +72,26 @@ export default Vue.extend({
       type: Boolean,
       default: false,
     },
-  },
-  methods: {
-    click(event) {
-      this.$emit('click', event)
+    large: {
+      type: Boolean,
+      default: false,
     },
-    dblclick(event) {
-      this.$emit('dblclick', event)
+    small: {
+      type: Boolean,
+      default: false,
     },
+    xLarge: {
+      type: Boolean,
+      default: false,
+    },
+    xSmall: {
+      type: Boolean,
+      default: false,
+    },
+    block: {
+      type: Boolean,
+      default: false,
+    }
   },
   computed: {
     elevationC() {
@@ -90,6 +112,14 @@ export default Vue.extend({
           break
       }
       return elevation
+    },
+  },
+  methods: {
+    click(event) {
+      this.$emit('click', event)
+    },
+    dblclick(event) {
+      this.$emit('dblclick', event)
     },
   },
 })
