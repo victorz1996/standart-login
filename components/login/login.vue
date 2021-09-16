@@ -14,7 +14,7 @@
         </div>
 
         <!-- Login Form -->
-        <v-form>
+        <v-form @submit.prevent="login">
           <v-row no-gutters justify="center" class="text-center">
             <v-col cols="10">
               <v-text-field
@@ -36,11 +36,11 @@
               />
             </v-col>
             <v-col cols="12" class="mb-5">
-              <GenericButton color="primary" large @click="login">Log In</GenericButton>
+              <GenericButton color="primary" type="submit" large @click="login"
+                >Log In</GenericButton
+              >
             </v-col>
-            <v-col>
-              
-            </v-col>
+            <v-col> </v-col>
           </v-row>
         </v-form>
 

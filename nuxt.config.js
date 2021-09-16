@@ -44,11 +44,41 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/auth-next',
+    // '@nuxtjs/auth'
   ],
+  auth: {
+    strategies: {
+      local: {
+        user: {
+          property: ''
+        },
+        endpoints: {
+          login: { url: '/authenticate', method: 'post' },
+          logout: false,
+          user: { url: '/account', method: 'get' }
+        },
+        token: {
+          property: 'id_token',
+          required: true,
+          type: 'Bearer'
+        },
+      }
+    },
+    redirect: {
+      login: '/login',
+      logout: '/login',
+      home: '/'
+    }
+  },
+
+  router: {
+    middleware: ['auth']
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: 'https://jsonplaceholder.typicode.com/'
+    baseURL: 'http://190.85.242.78:8080/api'
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
