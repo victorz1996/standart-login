@@ -1,7 +1,7 @@
-html {
+/* html {
   background-color: #56baed;
 }
-
+*/
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
@@ -72,7 +72,7 @@ h2.active {
 
 /* FORM TYPOGRAPHY*/
 
-input[type='button'],
+/* input[type='button'], */
 input[type='submit'],
 input[type='reset'] {
   background-color: #56baed;
@@ -96,13 +96,13 @@ input[type='reset'] {
   transition: all 0.3s ease-in-out;
 }
 
-input[type='button']:hover,
+/* input[type='button']:hover, */
 input[type='submit']:hover,
 input[type='reset']:hover {
   background-color: #39ace7;
 }
 
-input[type='button']:active,
+/* input[type='button']:active, */
 input[type='submit']:active,
 input[type='reset']:active {
   -moz-transform: scale(0.95);
@@ -240,9 +240,9 @@ input[type='text']:placeholder {
 }
 
 .fadeIn.fourth {
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  animation-delay: 1s;
+  -webkit-animation-delay: 1s !important;
+  -moz-animation-delay: 1s !important;
+  animation-delay: 1s !important;
 }
 
 /* Simple CSS3 Fade-in Animation */
