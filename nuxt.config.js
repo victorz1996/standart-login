@@ -45,8 +45,9 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/auth-next',
-    // '@nuxtjs/auth'
+    '@nuxtjs/i18n',
   ],
+  i18n: {},
   auth: {
     strategies: {
       local: {
