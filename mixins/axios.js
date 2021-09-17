@@ -1,6 +1,6 @@
 const axios = {
     methods: {
-        async $get(endpoint, callback) {
+        async $list(endpoint, callback) {
             try {
                 const res = await this.$axios.get(endpoint)
                 callback(res)
@@ -8,7 +8,7 @@ const axios = {
                 callback(error.response)
             }
         },
-        async $getOne(endpoint, id, callback) {
+        async $listOne(endpoint, id, callback) {
             try {
                 const res = await this.$axios.get(`${endpoint}/${id}`)
                 callback(res)
@@ -16,7 +16,7 @@ const axios = {
                 callback(error.response)
             }
         },
-        async $post(endpoint, object, callback) {
+        async $create(endpoint, object, callback) {
             try {
                 const res = await this.$axios.post(endpoint, object)
                 callback(res)
@@ -24,7 +24,7 @@ const axios = {
                 callback(error.response)
             }
         },
-        async $put(endpoint, id, object, callback) {
+        async $update(endpoint, id, object, callback) {
             try {
                 const res = await this.$axios.put(`${endpoint}/${id}`, object)
                 callback(res)
@@ -32,7 +32,7 @@ const axios = {
                 callback(error.response)
             }
         },
-        async $delete(endpoint, id, callback) {
+        async $remove(endpoint, id, callback) {
             try {
                 const res = await this.$axios.delete(`${endpoint}/${id}`)
                 callback(res)

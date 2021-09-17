@@ -16,17 +16,17 @@ export default {
       password: '',
     }
   },
-  mounted() {
-    this.getData()
-  },
   methods: {
-    getData() {
-      this.$get('users', (res) => {
-        console.log(res, 'response')
-      })
+    async login() {
+      try {
+        const login = {
+          typeDevice: 'WEB',
+          username: this.username,
+          password: this.password
+        }
+        await this.$auth.loginWith('local', { data: login })
+      } catch (error) {
+      }
     },
-    login() {
-      console.log('This is data login')
-    }
   },
 }
