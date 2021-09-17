@@ -1,28 +1,4 @@
-<template>
-  <v-btn
-    :color="color"
-    :icon="icon"
-    :text="text"
-    :type="type"
-    :outlined="outlined"
-    :disabled="disabled"
-    :rounded="rounded"
-    :loading="loading"
-    :elevation="elevationC"
-    :fab="fab"
-    :dark="dark"
-    :large="large"
-    :small="small"
-    :x-large="xLarge"
-    :x-small="xSmall"
-    :block="block"
-    @click="click"
-    @dblclick="dblclick"
-  >
-    <slot></slot>
-  </v-btn>
-</template>
-<script lang="ts">
+
 import Vue from 'vue'
 
 export default Vue.extend({
@@ -53,7 +29,7 @@ export default Vue.extend({
       default: false,
     },
     type: {
-      type: String  ,
+      type: String,
       default: 'button',
     },
     rounded: {
@@ -98,7 +74,6 @@ export default Vue.extend({
       let elevation = 0
       switch (this.elevation) {
         case 'none':
-          elevation = 0
           break
         case 'standard':
           elevation = 10
@@ -108,7 +83,6 @@ export default Vue.extend({
           break
 
         default:
-          elevation = 0
           break
       }
       return elevation
@@ -123,4 +97,3 @@ export default Vue.extend({
     },
   },
 })
-</script>
