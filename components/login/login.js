@@ -1,6 +1,6 @@
 import axios from '@/mixins/axios'
-import GenericButton from '@/components/common/GenericButton.vue'
-import TextField from '@/components/common/TextField.vue'
+import GenericButton from '~/components/common/GenericButton/GenericButton.vue'
+import TextField from '~/components/common/TextField/TextField.vue'
 
 export default {
   name: 'LoginComponent',

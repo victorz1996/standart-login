@@ -1,0 +1,25 @@
+<template>
+  <v-btn
+    :color="color"
+    :icon="icon"
+    :text="text"
+    :type="type"
+    :outlined="outlined"
+    :disabled="disabled"
+    :rounded="rounded"
+    :loading="loading"
+    :elevation="elevationC"
+    :fab="fab"
+    :dark="dark"
+    :large="large"
+    :small="small"
+    :x-large="xLarge"
+    :x-small="xSmall"
+    :block="block"
+    @click="click"
+    @dblclick="dblclick"
+  >
+    <slot></slot>
+  </v-btn>
+</template>
+<script src="./GenericButton.js"></script>
