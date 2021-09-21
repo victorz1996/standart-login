@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Bienvenido usuario {{ user.firstName }} ({{ user.login }})</h2>
+    <h2>Bienvenido {{ user.firstName }} ({{ user.login }})</h2>
     <v-btn color="error" depressed @click="logout()">Salir</v-btn>
 
     <v-container>

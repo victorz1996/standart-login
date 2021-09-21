@@ -1,11 +1,11 @@
-import axios from '@/mixins/axios'
+import sweetalert2 from '~/mixins/sweetAlert'
 import GenericButton from '~/components/common/GenericButton/GenericButton.vue'
 import TextField from '~/components/common/TextField/TextField.vue'
 
 export default {
   name: 'LoginComponent',
   layout: 'login',
-  mixins: [axios],
+  mixins: [sweetalert2],
   components: {
     GenericButton,
     TextField,
@@ -25,7 +25,8 @@ export default {
           password: this.password
         }
         await this.$auth.loginWith('local', { data: login })
-      } catch (error) {
+      } catch (e) {
+        this.$errorAlert('Error al iniciar sesion', 'Ha ocurrido un error verifique sus credenciales')
       }
     },
   },

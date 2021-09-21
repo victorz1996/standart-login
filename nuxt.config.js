@@ -47,7 +47,17 @@ export default {
     '@nuxtjs/auth-next',
     '@nuxtjs/i18n',
   ],
-  i18n: {},
+  i18n: {
+    locales: ['en', 'es'],
+    defaultLocale: 'es',
+    vueI18n: {
+      fallbackLocale: 'es',
+      messages: {
+        en: require('./locale/en.json'),
+        es: require('./locale/es.json')
+      },
+    }
+  },
   auth: {
     strategies: {
       local: {
@@ -72,7 +82,7 @@ export default {
       home: '/'
     }
   },
-
+  
   router: {
     middleware: ['auth']
   },

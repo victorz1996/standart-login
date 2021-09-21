@@ -19,7 +19,7 @@
             <v-col cols="10">
               <TextField
                 outlined
-                label="Username"
+                :label="$t('username')"
                 append-icon="mdi-account"
                 @model="username = $event"
               />
