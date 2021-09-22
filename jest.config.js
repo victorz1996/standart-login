@@ -7,7 +7,7 @@ module.exports = {
   moduleFileExtensions: [
     'js',
     'vue',
-    'json'
+    // 'json'
   ],
   transform: {
     '^.+\\.js$': 'babel-jest',
@@ -18,5 +18,6 @@ module.exports = {
     '<rootDir>/components/**/*.vue',
     '<rootDir>/pages/**/*.vue'
   ],
-  testEnvironment: 'jsdom'
+  testEnvironment: 'jsdom',
+  setupFiles: ["<rootDir>/test/unit/index.js"],
 }

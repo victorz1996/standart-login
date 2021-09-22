@@ -22,4 +22,4 @@
     <slot></slot>
   </v-btn>
 </template>
-<script src="./GenericButton.js"></script>
+<script src="./generic-button.js"></script>

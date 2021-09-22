@@ -1,6 +1,6 @@
 import sweetalert2 from '~/mixins/sweetAlert'
-import GenericButton from '~/components/common/GenericButton/GenericButton.vue'
-import TextField from '~/components/common/TextField/TextField.vue'
+import GenericButton from '~/components/common/generic-button/generic-button.vue'
+import TextField from '~/components/common/text-field/text-field.vue'
 
 export default {
   name: 'LoginComponent',

@@ -11,4 +11,4 @@
     @click:append="type == 'password' ? (show = !show) : () => {}"
   />
 </template>
-<script src="./TextField.js"></script>
+<script src="./text-field.js"></script>
