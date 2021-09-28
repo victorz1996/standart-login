@@ -1,11 +1,14 @@
 const axios = {
     methods: {
         async $list(endpoint, callback) {
+            let success
             try {
                 const res = await this.$axios.get(endpoint)
-                callback(res)
+                success = true
+                callback(res, success)
             } catch (error) {
-                callback(error.response)
+                success = false
+                callback(error.response, success)
             }
         },
         async $listOne(endpoint, id, callback) {
